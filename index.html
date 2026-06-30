@@ -6,7 +6,7 @@
 <title>Ayoola & Olamide — A Wedding Celebration</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=Allura&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600&family=Tangerine:wght@400;700&family=Cinzel:wght@400;500;600;700;800;900&family=Cinzel+Decorative:wght@400;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
     --deep: #0E0618;
@@ -39,14 +39,22 @@
     --shadow-gold: 0 6px 40px rgba(201,168,76,0.2);
     --shadow-deep: 0 20px 80px rgba(14,6,24,0.2);
     --serif: 'Cormorant Garamond', Georgia, serif;
-    --display: 'Playfair Display', Georgia, serif;
-    --script: 'Allura', cursive;
+    --display: 'Cinzel', Georgia, serif;
+    --script: 'Tangerine', cursive;
     --sans: 'Jost', system-ui, sans-serif;
     --r-sm: 6px;
     --r-md: 14px;
     --r-lg: 20px;
     --r-xl: 28px;
     --r-2xl: 40px;
+  }
+
+  .logo-ring {
+    flex-shrink: 0;
+    color: var(--gold);
+    width: 0.34em;
+    height: 0.34em;
+    margin: 0 0.2em;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -139,11 +147,16 @@
   }
 
   .intro-monogram {
-    font-family: var(--script);
-    font-size: clamp(5.5rem, 20vw, 10rem);
+    font-family: var(--display);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    font-size: clamp(4.5rem, 16vw, 8rem);
     color: var(--white);
     line-height: 0.9;
     margin-bottom: 0.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-shadow:
       0 0 120px rgba(201,168,76,0.6),
       0 0 40px rgba(201,168,76,0.3),
@@ -252,7 +265,7 @@
   .divider::before { background: linear-gradient(90deg, transparent, var(--gold)); }
   .divider::after  { background: linear-gradient(90deg, var(--gold), transparent); }
   .divider span {
-    font-family: var(--script); font-size: 1.4rem; color: var(--gold);
+    font-family: var(--script); font-size: 1.9rem; color: var(--gold);
     white-space: nowrap;
   }
 
@@ -284,9 +297,10 @@
     height: 68px;
   }
   .nav-brand {
-    font-family: var(--script); font-size: 2.2rem;
+    font-family: var(--display); font-weight: 600; font-size: 1.5rem;
+    letter-spacing: 0.06em;
     color: var(--plum-mid); text-decoration: none;
-    cursor: pointer; letter-spacing: 0.02em;
+    cursor: pointer;
     transition: color 0.2s;
     display: flex; align-items: center; gap: 8px;
   }
@@ -423,8 +437,13 @@
     border-radius: 50%;
   }
   .access-logo {
-    font-family: var(--script); font-size: 3.8rem;
+    font-family: var(--display); font-weight: 600;
+    letter-spacing: 0.05em;
+    font-size: 4rem;
     color: var(--white); line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-shadow: 0 0 50px rgba(201,168,76,0.6);
   }
   .access-tagline {
@@ -522,7 +541,7 @@
     border: 0.5px solid var(--border-light);
   }
   .couple-crest-text {
-    font-family: var(--script); font-size: 2.4rem;
+    font-family: var(--script); font-size: 3.1rem;
     color: var(--plum-mid); line-height: 1;
     text-shadow: 0 2px 12px rgba(90,30,140,0.2);
   }
@@ -597,7 +616,7 @@
     box-shadow: 0 4px 20px rgba(14,6,24,0.07), inset 0 1px 8px rgba(14,6,24,0.03);
   }
   .qr-frame svg { width: 100%; height: 100%; }
-  .qr-name { font-family: var(--script); font-size: 2rem; color: var(--plum-mid); }
+  .qr-name { font-family: var(--script); font-size: 2.6rem; color: var(--plum-mid); }
   .qr-sub { font-size: 0.7rem; color: var(--muted-light); margin-top: 0.3rem; letter-spacing: 0.06em; }
 
   /* Ticket perforated line */
@@ -990,7 +1009,7 @@
   .gallery-item img { width: 100%; display: block; }
   .gallery-placeholder {
     display: flex; align-items: center; justify-content: center;
-    color: var(--muted); font-family: var(--script); font-size: 1.2rem;
+    color: var(--muted); font-family: var(--script); font-size: 1.6rem;
     letter-spacing: 0.05em; aspect-ratio: 4/3;
   }
   .gallery-placeholder.tall { aspect-ratio: 3/4; }
@@ -1129,7 +1148,12 @@
     box-shadow: var(--shadow-sm);
   }
   .footer-brand {
-    font-family: var(--script); font-size: 2.8rem; color: var(--plum-mid);
+    font-family: var(--display); font-weight: 600;
+    letter-spacing: 0.05em;
+    font-size: 2.2rem; color: var(--plum-mid);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     text-shadow: 0 2px 16px rgba(90,30,140,0.2);
   }
   .footer-tagline {
@@ -1197,7 +1221,7 @@
 
   <div class="intro-content">
     <div class="intro-eyebrow">A Wedding Celebration</div>
-    <div class="intro-monogram">A &amp; O</div>
+    <div class="intro-monogram">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
     <div class="intro-rule"><span>est. 2026</span></div>
     <div class="intro-names">Ayoola &nbsp;&middot;&nbsp; Olamide</div>
     <div class="intro-date">14 June 2026 &nbsp;&middot;&nbsp; Lagos, Nigeria</div>
@@ -1225,7 +1249,7 @@
   <div class="access-box">
     <div class="access-crest">
       <div class="crest-ring">
-        <div class="access-logo">AYOL</div>
+        <div class="access-logo">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
       </div>
       <div class="access-tagline">A Celebration of Love &amp; Union</div>
     </div>
@@ -1257,7 +1281,7 @@
   <nav>
     <div class="nav-inner">
       <span class="nav-brand" onclick="goTo('home')">
-        AYOL <span class="nav-brand-dot"></span>
+        A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O <span class="nav-brand-dot"></span>
       </span>
       <ul class="nav-links" id="nav-links">
         <li><button onclick="goTo('home')" data-page="home">Home</button></li>
@@ -1416,9 +1440,9 @@
     <footer class="geo-bg">
       <div class="footer-inner">
         <div class="footer-crest">
-          <span style="font-family:var(--script);font-size:1.8rem;color:var(--plum-mid);">AO</span>
+          <span style="font-family:var(--script);font-size:2.4rem;color:var(--plum-mid);">AO</span>
         </div>
-        <div class="footer-brand">AYOL</div>
+        <div class="footer-brand">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
         <div class="footer-tagline">Together in love, forever in joy</div>
         <div class="divider" style="max-width:280px;margin:0.75rem auto;"><span>with love</span></div>
         <p>Ayoola &amp; Olamide &middot; 14 June 2026 &middot; Lagos, Nigeria</p>
@@ -1511,7 +1535,7 @@
 
     <footer class="geo-bg">
       <div class="footer-inner">
-        <div class="footer-brand">AYOL</div>
+        <div class="footer-brand">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
         <div class="divider" style="max-width:280px;margin:0.75rem auto;"><span>with love</span></div>
         <p>Ayoola &amp; Olamide &middot; 14 June 2026 &middot; Lagos, Nigeria</p>
       </div>
@@ -1656,7 +1680,7 @@
 
     <footer class="geo-bg">
       <div class="footer-inner">
-        <div class="footer-brand">AYOL</div>
+        <div class="footer-brand">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
         <div class="divider" style="max-width:280px;margin:0.75rem auto;"><span>with love</span></div>
         <p>Ayoola &amp; Olamide &middot; 14 June 2026 &middot; Lagos, Nigeria</p>
       </div>
@@ -1699,7 +1723,7 @@
 
     <footer class="geo-bg">
       <div class="footer-inner">
-        <div class="footer-brand">AYOL</div>
+        <div class="footer-brand">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
         <div class="divider" style="max-width:280px;margin:0.75rem auto;"><span>with love</span></div>
         <p>Ayoola &amp; Olamide &middot; 14 June 2026 &middot; Lagos, Nigeria</p>
       </div>
@@ -1805,7 +1829,7 @@
 
     <footer class="geo-bg">
       <div class="footer-inner">
-        <div class="footer-brand">AYOL</div>
+        <div class="footer-brand">A<svg class="logo-ring" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><ellipse cx="12" cy="15.3" rx="5.3" ry="4.4" stroke="currentColor" stroke-width="1.3"/><path d="M8.8 9L12 3.2L15.2 9H8.8Z" fill="currentColor"/></svg>O</div>
         <div class="divider" style="max-width:280px;margin:0.75rem auto;"><span>with love</span></div>
         <p>Ayoola &amp; Olamide &middot; 14 June 2026 &middot; Lagos, Nigeria</p>
       </div>
